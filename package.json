@@ -2,6 +2,8 @@
   "name": "tanggalmerah",
   "scripts": {
     "dev": "air",
-    "test": "go test ./..."
+    "test": "go test ./...",
+    "build:docker": "docker build -t ghcr.io/fransallen/tanggalmerah .",
+    "docker": "docker run --rm --name tanggalmerah -p 8080:8080 ghcr.io/fransallen/tanggalmerah"
   }
 }

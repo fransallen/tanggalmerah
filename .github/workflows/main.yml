@@ -11,12 +11,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Build & push Docker image
+      - name: Build image
         run: |
           echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io --username ${{ github.repository_owner }} --password-stdin
+          docker build -t ghcr.io/${{ github.repository }} .
 
-          docker build -t $github.repository .
-          docker push $github.repository
+      - name: Push to ghcr.io
+        run: |
+          docker push ghcr.io/${{ github.repository}}
 
       - name: Deploy to Swarm
         run: |
