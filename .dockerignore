@@ -1,0 +1,6 @@
+.docker*
+.git*
+Dockerfile
+package.json
+node_modules/
+bun.lock
