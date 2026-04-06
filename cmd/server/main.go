@@ -45,6 +45,7 @@ func main() {
 	var root http.Handler = mux
 	root = notFoundMiddleware(root)
 	root = corsMiddleware(root)
+	root = cacheControlMiddleware(root)
 	root = requestLoggerMiddleware(logger, root)
 	root = versionHeaderMiddleware(version, root)
 
@@ -97,6 +98,18 @@ func envOr(key, fallback string) string {
 func versionHeaderMiddleware(v string, next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("X-API-Version", v)
+		next.ServeHTTP(w, r)
+	})
+}
+
+// cacheControlMiddleware sets Cache-Control to 30 days for API endpoints.
+// The /health endpoint is excluded since its response changes every request.
+func cacheControlMiddleware(next http.Handler) http.Handler {
+	const maxAge = "public, max-age=2592000" // 30 days
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		if r.URL.Path != "/health" {
+			w.Header().Set("Cache-Control", maxAge)
+		}
 		next.ServeHTTP(w, r)
 	})
 }

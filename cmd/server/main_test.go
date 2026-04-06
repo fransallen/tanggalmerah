@@ -175,3 +175,31 @@ func TestCaptureRecorder_WritesNon404(t *testing.T) {
 		t.Errorf("want 'hello', got %q", rr.Body.String())
 	}
 }
+
+// --------------------------------------------------------------------------
+// cacheControlMiddleware
+// --------------------------------------------------------------------------
+
+func TestCacheControlMiddleware_APIEndpoint(t *testing.T) {
+	inner := http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.WriteHeader(http.StatusOK)
+	})
+	h := cacheControlMiddleware(inner)
+	rr := httptest.NewRecorder()
+	h.ServeHTTP(rr, httptest.NewRequest(http.MethodGet, "/api/holidays", nil))
+	if got := rr.Header().Get("Cache-Control"); got != "public, max-age=2592000" {
+		t.Errorf("want Cache-Control=public, max-age=2592000, got %q", got)
+	}
+}
+
+func TestCacheControlMiddleware_HealthExcluded(t *testing.T) {
+	inner := http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.WriteHeader(http.StatusOK)
+	})
+	h := cacheControlMiddleware(inner)
+	rr := httptest.NewRecorder()
+	h.ServeHTTP(rr, httptest.NewRequest(http.MethodGet, "/health", nil))
+	if got := rr.Header().Get("Cache-Control"); got != "" {
+		t.Errorf("want no Cache-Control on /health, got %q", got)
+	}
+}
