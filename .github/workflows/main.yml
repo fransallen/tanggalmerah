@@ -22,4 +22,4 @@ jobs:
 
       - name: Deploy to Swarm
         run: |
-          curl -sSf -X POST $DOCKER_SWARM_WEBHOOK_URL
+          curl -sSf -X POST "${{ secrets.DOCKER_SWARM_WEBHOOK_URL }}"
