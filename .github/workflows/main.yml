@@ -1,0 +1,23 @@
+name: Create docker image & deploy to Swarm
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build, push, and deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build & push Docker image
+        run: |
+          echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io --username ${{ github.repository_owner }} --password-stdin
+
+          docker build -t $github.repository .
+          docker push $github.repository
+
+      - name: Deploy to Swarm
+        run: |
+          curl -sSf -X POST $DOCKER_SWARM_WEBHOOK_URL
