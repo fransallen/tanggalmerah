@@ -1,0 +1,173 @@
+{
+  "year": 2025,
+  "holidays": [
+    {
+      "date": "2025-01-01",
+      "day": "Rabu",
+      "name": "Tahun Baru 2025 Masehi",
+      "type": "holiday"
+    },
+    {
+      "date": "2025-01-27",
+      "day": "Senin",
+      "name": "Isra Mi’raj Nabi Muhammad SAW",
+      "type": "holiday"
+    },
+    {
+      "date": "2025-01-28",
+      "day": "Selasa",
+      "name": "Tahun Baru Imlek 2576 Kongzili",
+      "type": "leave"
+    },
+    {
+      "date": "2025-01-29",
+      "day": "Rabu",
+      "name": "Tahun Baru Imlek 2576 Kongzili",
+      "type": "holiday"
+    },
+    {
+      "date": "2025-03-28",
+      "day": "Jumat",
+      "name": "Hari Suci Nyepi Tahun Baru Saka 1947",
+      "type": "leave"
+    },
+    {
+      "date": "2025-03-29",
+      "day": "Sabtu",
+      "name": "Hari Suci Nyepi Tahun Baru Saka 1947",
+      "type": "holiday"
+    },
+    {
+      "date": "2025-03-31",
+      "day": "Senin",
+      "name": "Hari Raya Idul Fitri 1446 Hijriyah",
+      "type": "holiday"
+    },
+    {
+      "date": "2025-04-01",
+      "day": "Selasa",
+      "name": "Hari Raya Idul Fitri 1446 Hijriyah",
+      "type": "holiday"
+    },
+    {
+      "date": "2025-04-02",
+      "day": "Rabu",
+      "name": "Hari Raya Idul Fitri 1446 Hijriyah",
+      "type": "leave"
+    },
+    {
+      "date": "2025-04-03",
+      "day": "Kamis",
+      "name": "Hari Raya Idul Fitri 1446 Hijriyah",
+      "type": "leave"
+    },
+    {
+      "date": "2025-04-04",
+      "day": "Jumat",
+      "name": "Hari Raya Idul Fitri 1446 Hijriyah",
+      "type": "leave"
+    },
+    {
+      "date": "2025-04-07",
+      "day": "Senin",
+      "name": "Hari Raya Idul Fitri 1446 Hijriyah",
+      "type": "leave"
+    },
+    {
+      "date": "2025-04-18",
+      "day": "Jumat",
+      "name": "Wafat Yesus Kristus / Jumat Agung",
+      "type": "holiday"
+    },
+    {
+      "date": "2025-04-20",
+      "day": "Minggu",
+      "name": "Kebangkitan Yesus Kristus (Paskah)",
+      "type": "holiday"
+    },
+    {
+      "date": "2025-05-01",
+      "day": "Kamis",
+      "name": "Hari Buruh Internasional",
+      "type": "holiday"
+    },
+    {
+      "date": "2025-05-12",
+      "day": "Senin",
+      "name": "Hari Raya Waisak 2569 BE",
+      "type": "holiday"
+    },
+    {
+      "date": "2025-05-13",
+      "day": "Selasa",
+      "name": "Hari Raya Waisak 2569 BE",
+      "type": "leave"
+    },
+    {
+      "date": "2025-05-29",
+      "day": "Kamis",
+      "name": "Kenaikan Yesus Kristus",
+      "type": "holiday"
+    },
+    {
+      "date": "2025-05-30",
+      "day": "Jumat",
+      "name": "Kenaikan Yesus Kristus",
+      "type": "leave"
+    },
+    {
+      "date": "2025-06-01",
+      "day": "Minggu",
+      "name": "Hari Lahir Pancasila",
+      "type": "holiday"
+    },
+    {
+      "date": "2025-06-06",
+      "day": "Jumat",
+      "name": "Hari Raya Idul Adha 1446 Hijriyah",
+      "type": "holiday"
+    },
+    {
+      "date": "2025-06-09",
+      "day": "Senin",
+      "name": "Hari Raya Idul Adha 1446 Hijriyah",
+      "type": "leave"
+    },
+    {
+      "date": "2025-06-27",
+      "day": "Jumat",
+      "name": "Tahun Baru Islam 1447 Hijriyah",
+      "type": "holiday"
+    },
+    {
+      "date": "2025-08-17",
+      "day": "Minggu",
+      "name": "Hari Kemerdekaan Republik Indonesia",
+      "type": "holiday"
+    },
+    {
+      "date": "2025-08-18",
+      "day": "Senin",
+      "name": "Hari Kemerdekaan Republik Indonesia",
+      "type": "leave"
+    },
+    {
+      "date": "2025-09-05",
+      "day": "Jumat",
+      "name": "Maulid Nabi Muhammad SAW",
+      "type": "holiday"
+    },
+    {
+      "date": "2025-12-25",
+      "day": "Kamis",
+      "name": "Hari Raya Natal",
+      "type": "holiday"
+    },
+    {
+      "date": "2025-12-26",
+      "day": "Jumat",
+      "name": "Hari Raya Natal",
+      "type": "leave"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "name": "tanggalmerah",
+  "scripts": {
+    "dev": "air",
+    "test": "go test ./..."
+  }
+}

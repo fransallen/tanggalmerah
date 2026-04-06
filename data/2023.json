@@ -1,0 +1,167 @@
+{
+  "year": 2023,
+  "holidays": [
+    {
+      "date": "2023-01-01",
+      "day": "Minggu",
+      "name": "Tahun Baru 2023 Masehi",
+      "type": "holiday"
+    },
+    {
+      "date": "2023-01-10",
+      "day": "Selasa",
+      "name": "Tahun Baru Imlek 2574 Kongzili",
+      "type": "holiday"
+    },
+    {
+      "date": "2023-01-23",
+      "day": "Senin",
+      "name": "Tahun Baru Imlek 2574 Kongzili",
+      "type": "leave"
+    },
+    {
+      "date": "2023-02-18",
+      "day": "Sabtu",
+      "name": "Isra Mi’raj Nabi Muhammad SAW",
+      "type": "holiday"
+    },
+    {
+      "date": "2023-03-22",
+      "day": "Rabu",
+      "name": "Hari Suci Nyepi Tahun Baru Saka 1945",
+      "type": "holiday"
+    },
+    {
+      "date": "2023-03-23",
+      "day": "Kamis",
+      "name": "Hari Suci Nyepi Tahun Baru Saka 1945",
+      "type": "leave"
+    },
+    {
+      "date": "2023-04-07",
+      "day": "Jumat",
+      "name": "Wafat Yesus Kristus / Jumat Agung",
+      "type": "holiday"
+    },
+    {
+      "date": "2023-04-19",
+      "day": "Rabu",
+      "name": "Hari Raya Idul Fitri 1444 Hijriyah",
+      "type": "leave"
+    },
+    {
+      "date": "2023-04-20",
+      "day": "Kamis",
+      "name": "Hari Raya Idul Fitri 1444 Hijriyah",
+      "type": "leave"
+    },
+    {
+      "date": "2023-04-21",
+      "day": "Jumat",
+      "name": "Hari Raya Idul Fitri 1444 Hijriyah",
+      "type": "leave"
+    },
+    {
+      "date": "2023-04-22",
+      "day": "Sabtu",
+      "name": "Hari Raya Idul Fitri 1444 Hijriyah",
+      "type": "holiday"
+    },
+    {
+      "date": "2023-04-23",
+      "day": "Minggu",
+      "name": "Hari Raya Idul Fitri 1444 Hijriyah",
+      "type": "holiday"
+    },
+    {
+      "date": "2023-04-24",
+      "day": "Senin",
+      "name": "Hari Raya Idul Fitri 1444 Hijriyah",
+      "type": "leave"
+    },
+    {
+      "date": "2023-04-25",
+      "day": "Selasa",
+      "name": "Hari Raya Idul Fitri 1444 Hijriyah",
+      "type": "leave"
+    },
+    {
+      "date": "2023-05-01",
+      "day": "Senin",
+      "name": "Hari Buruh Internasional",
+      "type": "holiday"
+    },
+    {
+      "date": "2023-05-18",
+      "day": "Kamis",
+      "name": "Kenaikan Yesus Kristus",
+      "type": "holiday"
+    },
+    {
+      "date": "2023-06-01",
+      "day": "Kamis",
+      "name": "Hari Lahir Pancasila",
+      "type": "holiday"
+    },
+    {
+      "date": "2023-06-02",
+      "day": "Jumat",
+      "name": "Hari Raya Waisak 2568 BE",
+      "type": "leave"
+    },
+    {
+      "date": "2023-06-04",
+      "day": "Minggu",
+      "name": "Hari Raya Waisak 2567 BE",
+      "type": "holiday"
+    },
+    {
+      "date": "2023-06-28",
+      "day": "Rabu",
+      "name": "Hari Raya Idul Adha 1444 Hijriyah",
+      "type": "leave"
+    },
+    {
+      "date": "2023-06-29",
+      "day": "Kamis",
+      "name": "Hari Raya Idul Adha 1444 Hijriyah",
+      "type": "holiday"
+    },
+    {
+      "date": "2023-06-30",
+      "day": "Jumat",
+      "name": "Hari Raya Idul Adha 1444 Hijriyah",
+      "type": "leave"
+    },
+    {
+      "date": "2023-07-19",
+      "day": "Rabu",
+      "name": "Tahun Baru Islam 1445 Hijriyah",
+      "type": "holiday"
+    },
+    {
+      "date": "2023-08-17",
+      "day": "Kamis",
+      "name": "Hari Kemerdekaan Republik Indonesia",
+      "type": "holiday"
+    },
+    {
+      "date": "2023-09-28",
+      "day": "Kamis",
+      "name": "Maulid Nabi Muhammad SAW",
+      "type": "holiday"
+    },
+    {
+      "date": "2023-12-25",
+      "day": "Senin",
+      "name": "Hari Raya Natal",
+      "type": "holiday"
+    },
+    {
+      "date": "2023-12-26",
+      "day": "Selasa",
+      "name": "Hari Raya Natal",
+      "type": "leave"
+    }
+  ]
+}
