@@ -177,12 +177,12 @@ curl "http://localhost:8080/api/holidays?year=2026&month=3&type=leave"
 
 ---
 
-### `GET /api/holidays/check?date=YYYY-MM-DD`
+### `GET /api/check?date=YYYY-MM-DD`
 
 Check whether a specific date is a public holiday, collective leave day, or a regular workday.
 
 ```bash
-curl "http://localhost:8080/api/holidays/check?date=2026-03-21"
+curl "http://localhost:8080/api/check?date=2026-03-21"
 ```
 
 ```json
@@ -206,7 +206,7 @@ curl "http://localhost:8080/api/holidays/check?date=2026-03-21"
 ```
 
 ```bash
-curl "http://localhost:8080/api/holidays/check?date=2026-03-20"
+curl "http://localhost:8080/api/check?date=2026-03-20"
 ```
 
 ```json
@@ -230,7 +230,7 @@ curl "http://localhost:8080/api/holidays/check?date=2026-03-20"
 ```
 
 ```bash
-curl "http://localhost:8080/api/holidays/check?date=2026-03-25"
+curl "http://localhost:8080/api/check?date=2026-03-25"
 ```
 
 ```json
