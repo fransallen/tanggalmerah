@@ -1,4 +1,4 @@
-# Tanggal Merah
+# Tanggal Merah API
 
 A lightweight, **zero-dependency** REST API for Indonesian public holidays and collective leave days, built with Go standard library only.
 
