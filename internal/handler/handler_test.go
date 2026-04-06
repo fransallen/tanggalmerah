@@ -365,3 +365,44 @@ func TestMeta_SplitCounts(t *testing.T) {
 		t.Errorf("want total_leave=4, got %d", resp.Meta.TotalCollectiveLeave)
 	}
 }
+
+// --------------------------------------------------------------------------
+// Error path coverage: broken repository (unreadable data dir)
+// --------------------------------------------------------------------------
+
+func newBrokenHandler(t *testing.T) *handler.Handler {
+	t.Helper()
+	// Create a dir, write a valid file, then make the file unreadable so that
+	// os.Open succeeds but reading fails — or use a dir named like a JSON file
+	// so Open fails with a non-NotExist error.
+	dir := t.TempDir()
+	// Create a path "2026.json" that is actually a directory; os.Open will
+	// succeed but json.Decode will fail, surfacing the internal error path.
+	if err := os.Mkdir(filepath.Join(dir, "2026.json"), 0o755); err != nil {
+		t.Fatal(err)
+	}
+	return handler.New(repository.New(dir), "test")
+}
+
+func TestListYears_Error(t *testing.T) {
+	// Point repo at a non-existent directory to force AvailableYears to fail.
+	h := handler.New(repository.New("/nonexistent/path/that/does/not/exist"), "test")
+	rr := get(t, newMux(h), "/api/years")
+	if rr.Code != http.StatusInternalServerError {
+		t.Fatalf("want 500, got %d", rr.Code)
+	}
+}
+
+func TestListHolidays_RepoError(t *testing.T) {
+	rr := get(t, newMux(newBrokenHandler(t)), "/api/holidays?year=2026")
+	if rr.Code != http.StatusInternalServerError {
+		t.Fatalf("want 500, got %d", rr.Code)
+	}
+}
+
+func TestCheckDate_RepoError(t *testing.T) {
+	rr := get(t, newMux(newBrokenHandler(t)), "/api/check?date=2026-01-01")
+	if rr.Code != http.StatusInternalServerError {
+		t.Fatalf("want 500, got %d", rr.Code)
+	}
+}

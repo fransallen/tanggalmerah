@@ -288,20 +288,27 @@ To add a new year: drop a `YYYY.json` file into the `data/` folder and restart t
 
 ```
 tanggalmerah/
-├── cmd/server/main.go               # Entry point, router, middleware, graceful shutdown
+├── cmd/server/
+│   ├── main.go                       # Entry point, router, middleware, graceful shutdown
+│   └── main_test.go                  # Tests for middleware and helpers
 ├── internal/
 │   ├── handler/
-│   │   ├── handler.go               # HTTP handlers
-│   │   └── handler_test.go          # Tests
-│   ├── model/model.go               # Domain types and response envelopes
-│   └── repository/repository.go    # JSON loading, in-memory cache, filter helpers
+│   │   ├── handler.go                # HTTP handlers
+│   │   └── handler_test.go           # Tests
+│   ├── model/
+│   │   └── model.go                  # Domain types and response envelopes
+│   └── repository/
+│       ├── repository.go             # JSON loading, in-memory cache, filter helpers
+│       └── repository_test.go        # Tests
 ├── data/
 │   ├── 2023.json
 │   ├── 2024.json
 │   ├── 2025.json
 │   └── 2026.json
+├── .air.toml                         # Live-reload config (air)
 ├── Dockerfile
-├── Makefile
+├── go.mod
+├── package.json
 └── README.md
 ```
 

@@ -80,7 +80,8 @@ func (h *Handler) ListYears(w http.ResponseWriter, r *http.Request) {
 func (h *Handler) ListHolidays(w http.ResponseWriter, r *http.Request) {
 	yearStr := r.URL.Query().Get("year")
 	if yearStr == "" {
-		yearStr = strconv.Itoa(time.Now().Year())
+		writeError(w, http.StatusBadRequest, "MISSING_YEAR", "Query parameter 'year' is required (YYYY)")
+		return
 	}
 
 	year, ok := parseYear(w, yearStr)
