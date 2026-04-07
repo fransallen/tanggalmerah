@@ -16,6 +16,12 @@ A lightweight, **zero-dependency** REST API for Indonesian public holidays and c
 - Full test suite (`go test ./...`)
 - Zero external dependencies — Go 1.22 stdlib only
 
+## Used by
+
+Showcasing who is using the Tanggal Merah API:
+
+- [TanggalanJawa.com](https://tanggalanjawa.com)
+
 ---
 
 ## Quick Start
