@@ -1,0 +1,32 @@
+version: "3.8"
+
+services:
+  tanggalmerah:
+    image: ghcr.io/fransallen/tanggalmerah:latest
+    networks:
+      - traefik-public
+    deploy:
+      replicas: 1
+      labels:
+        - traefik.enable=true
+        - traefik.http.routers.tanggalmerah.rule=Host(`tanggalmerah.upset.dev`)
+        - traefik.http.routers.tanggalmerah.entrypoints=web
+        - traefik.http.services.tanggalmerah.loadbalancer.server.port=8080
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: 128M
+      restart_policy:
+        condition: any
+        delay: 5s
+        max_attempts: 3
+        window: 10s
+      update_config:
+        parallelism: 1
+        delay: 5s
+        failure_action: pause
+        order: start-first
+
+networks:
+  traefik-public:
+    external: true
